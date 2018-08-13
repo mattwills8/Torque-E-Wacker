@@ -1,7 +1,49 @@
+.footer-contact-cta-content-wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 550px;
+}
+
 .footer-contact-cta {
   padding: 65px;
   padding-bottom: 70px;
   background-size: cover;
   background-position: center;
   text-align: center;
+
+  @include respond-to(tablet) {
+    padding: 70px 100px 85px 100px;
+  }
+
+  p {
+    margin-bottom: 30px;
+
+    @include respond-to(tablet) {
+      margin-bottom: 60px;
+    }
+  }
+
+  .button-wrapper {
+    padding-bottom: 30px;
+    width: 100%;
+
+    &:last-child {
+      padding-bottom: 0px;
+    }
+
+    @include respond-to(tablet) {
+      display: inline-block;
+      padding-right: 25px;
+      padding-bottom: 0px;
+      width: auto;
+
+      &:last-child {
+        padding-right: 0px;
+      }
+    }
+
+    button {
+      width: 182px;
+    }
+  }
 }
