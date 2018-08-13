@@ -1,7 +1,16 @@
 <?php
 
+require_once( get_stylesheet_directory() . '/includes/e-wacker-child-nav-menus-class.php');
 require_once( get_stylesheet_directory() . '/includes/widgets/e-wacker-child-widgets-class.php');
 require_once( get_stylesheet_directory() . '/includes/acf/e-wacker-child-acf-class.php');
+
+/**
+ * Child Theme Nav Menus
+ */
+
+ if ( class_exists( 'E_Wacker_Nav_Menus' ) ) {
+   new E_Wacker_Nav_Menus();
+ }
 
 /**
  * Child Theme Widgets
