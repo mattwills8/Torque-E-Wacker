@@ -9,6 +9,7 @@ class E_Wacker_Widgets {
   }
 
   public function modify_parent_sidebars( $sidebars ) {
+    unset($sidebars['primary']);
     return $sidebars;
   }
 }
