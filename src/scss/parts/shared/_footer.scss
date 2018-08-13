@@ -12,11 +12,11 @@ footer {
     max-width: $contentMaxWidth;
 
     @include respond-to(tablet) {
-      padding: 50px 130px 70px 130px;
+      padding: 50px $desktopMainPadding 70px $desktopMainPadding;
     }
 
     @include respond-to(desktop) {
-      padding: 80px 130px 80px 130px;
+      padding: 80px $desktopMainPadding 80px $desktopMainPadding;
     }
 
     .footer-col-logo {

@@ -1,0 +1,50 @@
+header {
+  .header-content-wrapper {
+    margin: 0 auto;
+    padding: 25px 35px 0px 35px;
+    max-width: $contentMaxWidth;
+
+    @include respond-to(tablet) {
+      padding: 35px 20px 0px 20px;
+    }
+
+    @include respond-to(desktop) {
+      padding: 40px $desktopMainPadding 0px $desktopMainPadding;
+    }
+
+    .header-main {
+      @include respond-to(tablet) {
+        padding-left: 45px;
+        padding-right: 45px;
+      }
+
+      @include respond-to(desktop) {
+        padding-left: 0px;
+        padding-right: 0px;
+      }
+    }
+
+    .header-menu-wrapper {
+      .header-burger-menu-text {
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 10px;
+        line-height: 16px;
+
+        @include respond-to-max(tablet) {
+          display: none;
+        }
+      }
+    }
+
+    .header-logo-wrapper {
+      margin-top: -10px;
+      text-align: center;
+
+      img {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
+  }
+}
