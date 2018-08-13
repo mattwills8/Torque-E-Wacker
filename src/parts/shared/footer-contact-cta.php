@@ -8,8 +8,8 @@ if ( get_field('show_footer_contact_cta') ) {
   <p>For more information, here are the best ways to get in touch.</p>
 
   <div class="footer-contact-cta-buttons">
-    <button>Contact Us</button>
-    <button>Leasing</button>
+    <button class="bg-white">Contact Us</button>
+    <button class="bg-white button-icon">Leasing</button>
   </div>
 
 </div>

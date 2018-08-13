@@ -1,0 +1,41 @@
+button {
+  border: none;
+  padding: 15px 45px 16px 45px;
+  color: white;
+  background-color: $orange;
+  text-align: center;
+  outline: none;
+
+  &.bg-white {
+    color: $orange;
+    background-color: $white;
+  }
+
+  &.button-icon {
+    position: relative;
+    padding-left: 30px;
+    padding-right: 60px;
+
+    &::after {
+      content: url(' ../images/link-icon.svg ');
+      position: absolute;
+      right: 30px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 13px;
+      height: 13px;
+    }
+
+    &.bg-white {
+      &::after {
+        content: url(' ../images/link-icon-orange.svg ');
+      }
+    }
+
+    &.download {
+      &::after {
+        content: url(' ../images/download-icon.svg ');
+      }
+    }
+  }
+}
