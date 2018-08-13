@@ -1,0 +1,48 @@
+footer {
+  color: $white;
+  background-color: $dark-grey;
+
+  p {
+    margin: 0;
+  }
+
+  .footer-content-wrapper {
+    margin: 0 auto;
+    padding: 30px 65px;
+    max-width: $contentMaxWidth;
+
+    @include respond-to(tablet) {
+      padding: 50px 130px 70px 130px;
+    }
+
+    @include respond-to(desktop) {
+      padding: 80px 130px 80px 130px;
+    }
+
+    .footer-col-logo {
+      img {
+        width: 100%;
+        max-width: 245px;
+        height: auto;
+
+        @include respond-to(desktop) {
+          max-width: 275px;
+          height: auto;
+        }
+      }
+    }
+
+    .footer-col {
+      padding-top: 18px;
+      @include respond-to(tablet) {
+        padding-right: 50px;
+      }
+
+      @include respond-to(desktop) {
+        padding-top: 0px;
+        padding-right: 0px;
+        padding-left: 75px;
+      }
+    }
+  }
+}
