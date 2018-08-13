@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Torque child theme for 35 East Wacker",
   "author": "Torque",
-  "license": "GPL",
+  "license": "ISC",
   "scripts": {
     "start": "webpack --mode=development --watch",
     "build": "webpack --mode=production"
