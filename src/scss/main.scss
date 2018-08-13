@@ -1,9 +1,10 @@
 @import 'partials/variables';
 
+@import 'typography/typography';
+
 @import 'grid';
 @import 'elements';
-
-@import 'typography/typography';
+@import 'search-form';
 
 @import 'parts/shared/header';
 @import 'parts/shared/footer';

@@ -13,6 +13,7 @@
       </div>
 
       <div class="col1 col3-tablet header-search-wrapper">
+        <?php get_search_form(true); ?>
       </div>
     </div>
 

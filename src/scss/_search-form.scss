@@ -1,0 +1,33 @@
+form.search-form {
+  display: inline-block;
+  border-bottom: 1px solid $black;
+  width: 150px;
+  text-align: left;
+
+  .search-input {
+    border: none;
+    outline: none;
+
+    &::placeholder {
+      color: $black;
+    }
+  }
+
+  .search-icon {
+    float: right;
+    position: relative;
+    padding: 0;
+    width: 13px;
+    height: 13px;
+    background-color: unset;
+
+    &::after {
+      content: url(' ../images/search-icon.svg ');
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 13px;
+      height: 13px;
+    }
+  }
+}

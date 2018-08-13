@@ -46,5 +46,15 @@ header {
         max-width: 300px;
       }
     }
+
+    .header-search-wrapper {
+      padding-top: 20px;
+      text-align: center;
+
+      @include respond-to(tablet) {
+        padding-top: 0px;
+        text-align: right;
+      }
+    }
   }
 }
