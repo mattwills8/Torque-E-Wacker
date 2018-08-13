@@ -1,1 +1,7 @@
-@import "typography/typography";
+@import 'partials/variables';
+
+@import 'grid';
+
+@import 'typography/typography';
+
+@import 'parts/shared/footer';
