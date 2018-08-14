@@ -1,0 +1,53 @@
+.header-menu-wrapper {
+  position: relative;
+
+  .mega-menu-highlight-box {
+    display: inline-block;
+    margin: -5px;
+    padding: 5px;
+
+    .header-burger-menu-text {
+      display: inline-block;
+      vertical-align: top;
+      margin-left: 10px;
+      line-height: 1.2;
+
+      @include respond-to-max(tablet) {
+        display: none;
+      }
+    }
+  }
+
+  .mega-menu-menu-wrapper {
+    position: absolute;
+    left: -5px;
+    top: 25px;
+    z-index: 10;
+    padding: 20px;
+    background-color: $orange;
+
+    .mega-menu-item {
+      margin-bottom: 5px;
+
+      &:last-child {
+        margin-bottom: 0px;
+      }
+
+      a {
+        color: $white;
+        font-weight: 300;
+      }
+    }
+  }
+
+  &.active {
+    .mega-menu-highlight-box {
+      background-color: $orange;
+      color: $white;
+
+      .torque-burger-menu-line {
+        background-color: $white;
+      }
+    }
+  }
+}

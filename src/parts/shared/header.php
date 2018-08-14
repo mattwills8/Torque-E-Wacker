@@ -3,10 +3,8 @@
   <div class="header-content-wrapper">
 
     <div class="row header-main">
-      <div class="col4 col3-tablet header-menu-wrapper">
-        <?php get_template_part( 'parts/elements/element', 'burger-menu'); ?>
-        <div class="header-burger-menu-text">MENU</div>
-      </div>
+
+      <?php get_template_part( 'parts/shared/header', 'mega-menu' ); ?>
 
       <div class="col2 col3-tablet header-logo-wrapper">
         <?php get_template_part( 'parts/shared/logo', 'dark'); ?>
