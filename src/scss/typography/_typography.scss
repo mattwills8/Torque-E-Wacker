@@ -3,21 +3,110 @@
 @import 'partials/mixins/responsive';
 
 body {
+  font-family: $Futura;
+  font-size: 18px;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.39;
+  letter-spacing: 0.1px;
+  color: $charcoal-grey;
+}
+
+p {
+  margin: 0;
 }
 
 h1 {
+  margin: 10px 0px;
+  font-family: $Engravers;
+  font-size: 40px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 0.7;
+  letter-spacing: normal;
+  color: $orange;
+
+  @include respond-to(tablet) {
+    font-size: 55px;
+  }
+
+  @include respond-to(desktop) {
+    line-height: normal;
+    font-size: 72px;
+  }
 }
 
 h2 {
+  margin: 20px 0px;
+  font-family: $Engravers;
+  font-size: 36px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 0.78;
+  letter-spacing: normal;
+  color: $orange;
+
+  @include respond-to(tablet) {
+    line-height: normal;
+    font-size: 40px;
+  }
+
+  @include respond-to(desktop) {
+    font-size: 48px;
+  }
 }
 
 h3 {
+  margin: 10px 0px;
+  font-family: $Futura;
+  font-size: 27px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: $black;
 }
 
 h4 {
+  font-family: $Futura;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.1px;
+  color: $dark-grey;
 }
 
 a {
+  font-weight: normal;
+  color: $orange;
   cursor: pointer;
   text-decoration: none;
+  text-transform: uppercase;
+}
+
+input {
+  font-family: $Futura;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.79;
+  letter-spacing: 0.1px;
+  color: $charcoal-grey;
+}
+
+.quick-links {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: normal;
+  letter-spacing: 0.1px;
+  color: $dark-grey;
+
+  @include respond-to(desktop) {
+    font-size: 18px;
+  }
 }

@@ -29,7 +29,7 @@ header {
         display: inline-block;
         vertical-align: top;
         margin-left: 10px;
-        line-height: 16px;
+        line-height: 1.2;
 
         @include respond-to-max(tablet) {
           display: none;
