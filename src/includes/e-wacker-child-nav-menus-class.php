@@ -11,6 +11,7 @@ class E_Wacker_Nav_Menus {
 
   public function modify_parent_nav_menus( $nav_menus ) {
     $nav_menus['quick_links'] = 'Quick Links';
+    $nav_menus['secondary'] = 'Secondary';
     return $nav_menus;
   }
 
