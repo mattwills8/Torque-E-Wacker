@@ -11,6 +11,8 @@ function e_wacker_mega_menu_children( $parent ) {
   ?>
 
   <div class="mega-menu-child-items-wrapper" data-parent-id="<?php echo $parent->ID; ?>">
+    <h3 class="children-items-title"><?php echo $parent->title; ?></h3>
+
     <?php echo Torque_Mega_Menu_Utilities::render_child_items($parent); ?>
   </div>
 
@@ -21,7 +23,7 @@ add_action( Torque_Mega_Menu_Utilities::$post_parent_item_handle, 'e_wacker_mega
 
 ?>
 
-<div id="mega-menu-entry" class="col4 col3-tablet header-menu-wrapper active">
+<div id="mega-menu-entry" class="col4 col3-tablet header-menu-wrapper">
   <div class="mega-menu-highlight-box" >
     <?php get_template_part( 'parts/elements/element', 'burger-menu'); ?>
     <div class="header-burger-menu-text">MENU</div>
@@ -29,7 +31,7 @@ add_action( Torque_Mega_Menu_Utilities::$post_parent_item_handle, 'e_wacker_mega
 
   <div class="row mega-menu-menu-wrapper" >
 
-    <div class="col1 col2-tablet parent-items-wrapper" >
+    <div class="col1 parent-items-wrapper" >
 
       <?php
       if ($items && sizeof($items) > 0) {
@@ -51,7 +53,9 @@ add_action( Torque_Mega_Menu_Utilities::$post_parent_item_handle, 'e_wacker_mega
     <div class="col2-tablet children-items-wrapper" >
 
       <?php
-        foreach ($items as $key => $parent) {
+        foreach ($items as $key => $parent) { ?>
+
+          <?php
           echo e_wacker_mega_menu_children( $parent );
         }
       ?>

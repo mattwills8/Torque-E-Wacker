@@ -24,19 +24,6 @@ header {
       }
     }
 
-    .header-menu-wrapper {
-      .header-burger-menu-text {
-        display: inline-block;
-        vertical-align: top;
-        margin-left: 10px;
-        line-height: 1.2;
-
-        @include respond-to-max(tablet) {
-          display: none;
-        }
-      }
-    }
-
     .header-logo-wrapper {
       margin-top: -10px;
       text-align: center;
