@@ -1,9 +1,22 @@
 <?php
 
-require_once( get_template_directory() . '/includes/utilities/torque-utilities.php' );
+require_once( get_template_directory() . '/includes/utilities/torque-mega-menu-utilities.php' );
 
-$items = TQ::get_nav_menu_items_nested( 'primary' );
-$secondary_items = TQ::get_nav_menu_items_nested( 'secondary' );
+$items = Torque_Mega_Menu_Utilities::get_nav_menu_items_nested( 'primary' );
+$secondary_items = Torque_Mega_Menu_Utilities::get_nav_menu_items_nested( 'secondary' );
+
+// render children mobile
+add_action( Torque_Mega_Menu_Utilities::$post_parent_item_handle, function($parent) {
+  ob_start();
+  ?>
+
+  <div class="mega-menu-child-items-wrapper" >
+    <?php echo Torque_Mega_Menu_Utilities::render_child_items($parent); ?>
+  </div>
+
+  <?php
+  echo ob_get_clean();
+})
 
 ?>
 
@@ -19,17 +32,7 @@ $secondary_items = TQ::get_nav_menu_items_nested( 'secondary' );
 
       <?php
       if ($items && sizeof($items) > 0) {
-        foreach ($items as $key => $item) {
-        ?>
-
-          <div class="mega-menu-item mega-menu-parent-item">
-            <a href="<?php echo $item->url; ?>">
-              <?php echo $item->title; ?>
-            </a>
-          </div>
-
-        <?php
-        }
+        echo Torque_Mega_Menu_Utilities::render_parent_items( $items );
       }
       ?>
 
@@ -37,15 +40,7 @@ $secondary_items = TQ::get_nav_menu_items_nested( 'secondary' );
 
         <div class="secondary-parent-items-wrapper" >
 
-          <?php foreach ($secondary_items as $key => $item) { ?>
-
-            <div class="mega-menu-item mega-menu-parent-item">
-              <a href="<?php echo $item->url; ?>">
-                <?php echo $item->title; ?>
-              </a>
-            </div>
-
-          <?php } ?>
+          <?php echo Torque_Mega_Menu_Utilities::render_parent_items( $secondary_items ); ?>
 
         </div>
       <?php } ?>
