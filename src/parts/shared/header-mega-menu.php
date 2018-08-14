@@ -5,18 +5,19 @@ require_once( get_template_directory() . '/includes/utilities/torque-mega-menu-u
 $items = Torque_Mega_Menu_Utilities::get_nav_menu_items_nested( 'primary' );
 $secondary_items = Torque_Mega_Menu_Utilities::get_nav_menu_items_nested( 'secondary' );
 
-// render children mobile
-add_action( Torque_Mega_Menu_Utilities::$post_parent_item_handle, function($parent) {
+// render children
+function e_wacker_mega_menu_children( $parent ) {
   ob_start();
   ?>
 
-  <div class="mega-menu-child-items-wrapper" >
+  <div class="mega-menu-child-items-wrapper" data-parent-id="<?php echo $parent->ID; ?>">
     <?php echo Torque_Mega_Menu_Utilities::render_child_items($parent); ?>
   </div>
 
   <?php
   echo ob_get_clean();
-})
+}
+add_action( Torque_Mega_Menu_Utilities::$post_parent_item_handle, 'e_wacker_mega_menu_children' );
 
 ?>
 
@@ -26,9 +27,9 @@ add_action( Torque_Mega_Menu_Utilities::$post_parent_item_handle, function($pare
     <div class="header-burger-menu-text">MENU</div>
   </div>
 
-  <div class="mega-menu-menu-wrapper" >
+  <div class="row mega-menu-menu-wrapper" >
 
-    <div class="parent-items-wrapper" >
+    <div class="col1 col2-tablet parent-items-wrapper" >
 
       <?php
       if ($items && sizeof($items) > 0) {
@@ -44,6 +45,16 @@ add_action( Torque_Mega_Menu_Utilities::$post_parent_item_handle, function($pare
 
         </div>
       <?php } ?>
+
+    </div>
+
+    <div class="col2-tablet children-items-wrapper" >
+
+      <?php
+        foreach ($items as $key => $parent) {
+          echo e_wacker_mega_menu_children( $parent );
+        }
+      ?>
 
     </div>
 
