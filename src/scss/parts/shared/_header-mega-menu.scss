@@ -19,11 +19,13 @@
   }
 
   .mega-menu-menu-wrapper {
+    display: none;
     position: absolute;
     left: -5px;
     top: 25px;
     z-index: 10;
     padding: 20px;
+    min-width: 200px;
     background-color: $orange;
 
     .mega-menu-item {
@@ -38,6 +40,16 @@
         font-weight: 300;
       }
     }
+
+    .parent-items-wrapper {
+      padding-right: 15px;
+
+      .secondary-parent-items-wrapper {
+        margin-top: 15px;
+        border-top: 1px solid $black;
+        padding-top: 15px;
+      }
+    }
   }
 
   &.active {
@@ -48,6 +60,10 @@
       .torque-burger-menu-line {
         background-color: $white;
       }
+    }
+
+    .mega-menu-menu-wrapper {
+      display: block;
     }
   }
 }

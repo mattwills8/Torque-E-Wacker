@@ -15,21 +15,42 @@ $secondary_items = TQ::get_nav_menu_items_nested( 'secondary' );
 
   <div class="mega-menu-menu-wrapper" >
 
-    <?php
-    if ($items && sizeof($items) > 0) {
-      foreach ($items as $key => $item) {
-      ?>
-
-        <div class="mega-menu-item mega-menu-parent-item">
-          <a href="<?php echo $item->url; ?>">
-            <?php echo $item->title; ?>
-          </a>
-        </div>
+    <div class="parent-items-wrapper" >
 
       <?php
+      if ($items && sizeof($items) > 0) {
+        foreach ($items as $key => $item) {
+        ?>
+
+          <div class="mega-menu-item mega-menu-parent-item">
+            <a href="<?php echo $item->url; ?>">
+              <?php echo $item->title; ?>
+            </a>
+          </div>
+
+        <?php
+        }
       }
-    }
-    ?>
+      ?>
+
+      <?php if ($secondary_items && sizeof($secondary_items) > 0) { ?>
+
+        <div class="secondary-parent-items-wrapper" >
+
+          <?php foreach ($secondary_items as $key => $item) { ?>
+
+            <div class="mega-menu-item mega-menu-parent-item">
+              <a href="<?php echo $item->url; ?>">
+                <?php echo $item->title; ?>
+              </a>
+            </div>
+
+          <?php } ?>
+
+        </div>
+      <?php } ?>
+
+    </div>
 
   </div>
 </div>
