@@ -18,7 +18,7 @@
     </div>
 
     <div class="row header-quick-links">
-
+      <?php get_template_part( 'parts/shared/header', 'quick-links' ); ?>
     </div>
 
   </div>

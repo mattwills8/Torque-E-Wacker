@@ -1,0 +1,28 @@
+.quick-links-title {
+  margin-right: 10px;
+  font-weight: normal;
+  color: $dark-grey;
+  text-align: left;
+
+  @include respond-to(tablet) {
+    text-align: center;
+  }
+
+  @include respond-to(desktop) {
+    display: inline-block;
+    text-align: left;
+  }
+}
+
+.torque-menu-items-inline {
+  display: inline-block;
+
+  .torque-menu-item-wrapper {
+    margin-right: 10px;
+
+    a {
+      font-weight: normal;
+      color: $dark-grey;
+    }
+  }
+}
