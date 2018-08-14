@@ -1,9 +1,31 @@
-/*
 @font-face {
-  font-family: Example;
-  src: url('../../statics/fonts/Example/Example.otf')
-    format('opentype');
+  font-family: Jost;
+  src: url('../statics/fonts/Jost/OpenType/Jost-300-Light.otf')
+      format('opentype'),
+    url('../statics/fonts/Jost/TrueType/Jost-300-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Jost;
+  src: url('../statics/fonts/Jost/OpenType/Jost-400-Book.otf')
+      format('opentype'),
+    url('../statics/fonts/Jost/TrueType/Jost-400-Book.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
-*/
+
+@font-face {
+  font-family: Jost;
+  src: url('../statics/fonts/Jost/OpenType/Jost-500-Medium.otf')
+      format('opentype'),
+    url('../statics/fonts/Jost/TrueType/Jost-500-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Diplomata+SC');
+
+$Engravers: 'Diplomata SC', cursive;
+$Futura: 'Jost';

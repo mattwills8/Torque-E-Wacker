@@ -5,7 +5,10 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 const srcDir = path.join(__dirname, 'src')
-const buildDir = path.join(projectConfig.root, 'wp-content/themes/e-wacker-child')
+const buildDir = path.join(
+  projectConfig.root,
+  'wp-content/themes/e-wacker-child'
+)
 
 const config = {
   context: srcDir,
@@ -16,7 +19,7 @@ const config = {
 
   output: {
     path: path.join(buildDir, './bundles'),
-    publicPath: '/',
+    publicPath: '',
     filename: 'bundle.js',
   },
 
@@ -51,8 +54,12 @@ const config = {
       },
       {
         test: projectConfig.webpackDefaults.fonts.test,
-        exclude: ['/node_modules/', 'statics'],
-        use: projectConfig.webpackDefaults.fonts.loaders,
+        exclude: ['/node_modules/'],
+        loader: 'file-loader',
+        options: {
+            name: '[hash].[ext]',
+            publicPath: '',
+        }
       },
     ],
   },
@@ -65,10 +72,6 @@ const config = {
       ignoreOrder: true,
     }),
     new CopyWebpackPlugin([
-      {
-        from: path.join(srcDir, 'statics/**/*'),
-        to: buildDir,
-      },
       { from: path.join(srcDir, 'style.css'), to: buildDir },
       { from: path.join(srcDir, 'screenshot.png'), to: buildDir },
       { from: path.join(srcDir, '**/*.php'), to: buildDir },
