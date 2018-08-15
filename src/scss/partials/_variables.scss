@@ -12,4 +12,6 @@ $TabletMaxWidth: 1024px;
 
 $contentMaxWidth: 1180px;
 
-$desktopMainPadding: 130px;
+$mobileMainPadding: 65px;
+$tabletMainPadding: 130px;
+$desktopMainPadding: $tabletMainPadding;
