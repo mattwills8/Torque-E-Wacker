@@ -16,7 +16,7 @@
       <h2>Latest Updates</h2>
     </div>
 
-		<?php get_template_part( 'parts/templates/content', $post->post_type ); ?>
+		<?php get_template_part( 'parts/templates/content', 'front-page' ); ?>
 
 	<?php endwhile; ?>
 </main>

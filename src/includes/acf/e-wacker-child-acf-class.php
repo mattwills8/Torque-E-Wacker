@@ -75,7 +75,7 @@ class E_Wacker_ACF {
       					),
       				),
       			),
-      			'default_value' => 10,
+      			'default_value' => 9,
       			'min' => 0,
       			'max' => 20,
       			'step' => 1,
