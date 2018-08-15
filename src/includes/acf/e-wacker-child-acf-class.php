@@ -104,30 +104,19 @@ class E_Wacker_ACF {
       			'name' => 'show_link_button',
       			'type' => 'true_false',
       		),
-      		array(
-      			'key' => 'field_5b742bcfc45a8',
+          array(
+      			'key' => 'field_5b742e32d940e',
       			'label' => 'Forms',
       			'name' => 'post_forms',
-      			'type' => 'repeater',
-      			'collapsed' => 'field_5b742ca93ec4c',
-      			'min' => 0,
-      			'max' => 0,
-      			'layout' => 'row',
-      			'sub_fields' => array(
-      				array(
-      					'key' => 'field_5b742ca93ec4c',
-      					'label' => 'Form',
-      					'name' => 'post_form',
-      					'type' => 'file',
-      					'return_format' => 'array',
-      					'library' => 'all',
-      					'min_size' => '',
-      					'max_size' => 2,
-      					'mime_types' => '',
-      				),
-      			),
+      			'type' => 'file',
+      			'instructions' => 'Upload a zip file containing the forms to attach to this post.',
+      			'return_format' => 'array',
+      			'library' => 'all',
+      			'min_size' => '',
+      			'max_size' => 5,
+      			'mime_types' => 'zip',
       		),
-      	),
+        ),
       	'location' => array(
       		array(
       			array(
