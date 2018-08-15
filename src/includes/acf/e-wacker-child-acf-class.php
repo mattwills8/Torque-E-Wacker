@@ -93,6 +93,53 @@ class E_Wacker_ACF {
       	'position' => 'side',
       ));
 
+      // add post meta
+      acf_add_local_field_group(array(
+      	'key' => 'group_5b742ba01da18',
+      	'title' => 'Post Meta',
+      	'fields' => array(
+      		array(
+      			'key' => 'field_5b742bbbc45a7',
+      			'label' => 'Show Link Button',
+      			'name' => 'show_link_button',
+      			'type' => 'true_false',
+      		),
+      		array(
+      			'key' => 'field_5b742bcfc45a8',
+      			'label' => 'Forms',
+      			'name' => 'post_forms',
+      			'type' => 'repeater',
+      			'collapsed' => 'field_5b742ca93ec4c',
+      			'min' => 0,
+      			'max' => 0,
+      			'layout' => 'row',
+      			'sub_fields' => array(
+      				array(
+      					'key' => 'field_5b742ca93ec4c',
+      					'label' => 'Form',
+      					'name' => 'post_form',
+      					'type' => 'file',
+      					'return_format' => 'array',
+      					'library' => 'all',
+      					'min_size' => '',
+      					'max_size' => 2,
+      					'mime_types' => '',
+      				),
+      			),
+      		),
+      	),
+      	'location' => array(
+      		array(
+      			array(
+      				'param' => 'post_type',
+      				'operator' => '==',
+      				'value' => 'post',
+      			),
+      		),
+      	),
+      	'active' => 1,
+      ));
+
       endif;
   }
 }
