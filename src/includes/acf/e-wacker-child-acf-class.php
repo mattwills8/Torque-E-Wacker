@@ -31,6 +31,36 @@ class E_Wacker_ACF {
       			'type' => 'true_false',
       			'default_value' => 0,
       		),
+          array(
+      			'key' => 'field_5b73f9b41c0f2',
+      			'label' => 'Show Post Loop',
+      			'name' => 'show_post_loop',
+      			'type' => 'true_false',
+      			'default_value' => 0,
+      		),
+          array(
+      			'key' => 'field_5b73f850a2b6d',
+      			'label' => 'Loop Post Category',
+      			'name' => 'loop_post_category',
+      			'type' => 'taxonomy',
+            'conditional_logic' => array(
+      				array(
+      					array(
+      						'field' => 'field_5b73f9b41c0f2',
+      						'operator' => '==',
+      						'value' => '1',
+      					),
+      				),
+      			),
+      			'taxonomy' => 'category',
+      			'field_type' => 'radio',
+      			'allow_null' => 0,
+      			'add_term' => 0,
+      			'save_terms' => 0,
+      			'load_terms' => 0,
+      			'return_format' => 'id',
+      			'multiple' => 0,
+      		),
       	),
       	'location' => array(
       		array(
