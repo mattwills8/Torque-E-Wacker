@@ -1,22 +1,24 @@
 .wacker-hero {
-  padding: 50px 0px 60px 0px;
-  background-color: $light-grey;
-  text-align: center;
+  .wacker-hero-title-wrapper {
+    padding: 50px 0px 60px 0px;
+    background-color: $light-grey;
+    text-align: center;
 
-  h1 {
-    margin-top: 0px;
-    padding: 0px 20px;
-  }
+    h1 {
+      margin-top: 0px;
+      padding: 0px 20px;
+    }
 
-  p {
-    margin: 0 auto;
-    padding: 0px $mobileMainPadding;
-    width: 100%;
-    max-width: 570px + 2 * $tabletMainPadding;
-    box-sizing: border-box;
+    p {
+      margin: 0 auto;
+      padding: 0px $mobileMainPadding;
+      width: 100%;
+      max-width: 570px + 2 * $tabletMainPadding;
+      box-sizing: border-box;
 
-    @include respond-to(tablet) {
-      padding: 0px $tabletMainPadding;
+      @include respond-to(tablet) {
+        padding: 0px $tabletMainPadding;
+      }
     }
   }
 }

@@ -4,12 +4,14 @@
 
     <?php
       $post_cat = get_field('loop_post_category');
+      $num_posts = get_field('loop_number_posts');
 
       $query = new WP_Query( array(
-        'cat' => $post_cat
+        'cat'             => $post_cat,
+        'posts_per_page'  => $num_posts
       ) );
 
-      $found_posts = (int) $query->found_posts;
+      $found_posts = $num_posts ? min((int) $query->found_posts, (int) $num_posts) : $query->found_posts;
 
       $post_count = 0;
 
@@ -43,7 +45,7 @@
             get_template_part( 'parts/templates/loop', $post->post_type );
 
 
-        if ($post_count % 3 == -1 || $post_count === $found_posts - 1) { ?>
+        if ($post_count % 3 === 2 || $post_count === $found_posts - 1) { ?>
           </div>
         <?php }
 

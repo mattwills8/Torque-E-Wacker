@@ -61,6 +61,25 @@ class E_Wacker_ACF {
       			'return_format' => 'id',
       			'multiple' => 0,
       		),
+          array(
+      			'key' => 'field_5b740bdc8da44',
+      			'label' => 'Loop Number Posts',
+      			'name' => 'loop_number_posts',
+      			'type' => 'number',
+      			'conditional_logic' => array(
+      				array(
+      					array(
+      						'field' => 'field_5b73f9b41c0f2',
+      						'operator' => '==',
+      						'value' => '1',
+      					),
+      				),
+      			),
+      			'default_value' => 10,
+      			'min' => 0,
+      			'max' => 20,
+      			'step' => 1,
+      		),
       	),
       	'location' => array(
       		array(

@@ -1,0 +1,21 @@
+main#front-page {
+  .front-page-updates-title-wrapper {
+    padding: $articlePadding;
+    padding-bottom: 0px;
+    text-align: center;
+
+    @include respond-to(tablet) {
+      padding: $articlePaddingTablet;
+      padding-bottom: 0px;
+    }
+
+    @include respond-to(desktop) {
+      padding: $articlePaddingDesktop;
+      padding-bottom: 0px;
+    }
+
+    h2 {
+      margin: 0;
+    }
+  }
+}

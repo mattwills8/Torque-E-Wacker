@@ -1,11 +1,15 @@
+$articlePadding: 40px $mobileMainPadding;
+$articlePaddingTablet: 45px $tabletMainPadding;
+$articlePaddingDesktop: 70px $tabletMainPadding;
+
 article {
-  padding: 40px $mobileMainPadding;
+  padding: $articlePadding;
 
   @include respond-to(tablet) {
-    padding: 45px $tabletMainPadding;
+    padding: $articlePaddingTablet;
   }
 
   @include respond-to(desktop) {
-    padding: 70px $tabletMainPadding;
+    padding: $articlePaddingDesktop;
   }
 }
