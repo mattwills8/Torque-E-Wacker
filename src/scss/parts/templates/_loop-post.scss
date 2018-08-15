@@ -18,4 +18,12 @@ $loopItemPadding: 10px;
       margin-bottom: 25px;
     }
   }
+
+  .wacker-loop-post-forms-button {
+    margin-top: 40px;
+
+    @include respond-to(desktop) {
+      margin-top: 25px;
+    }
+  }
 }
