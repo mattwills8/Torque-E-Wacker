@@ -23,4 +23,6 @@ $excerpt = get_the_excerpt();
       <?php the_excerpt(); ?>
     </p>
 
+  </div>
+
 </div>

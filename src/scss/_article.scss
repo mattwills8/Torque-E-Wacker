@@ -1,0 +1,11 @@
+article {
+  padding: 40px $mobileMainPadding;
+
+  @include respond-to(tablet) {
+    padding: 45px $tabletMainPadding;
+  }
+
+  @include respond-to(desktop) {
+    padding: 70px $tabletMainPadding;
+  }
+}
