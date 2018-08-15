@@ -1,0 +1,26 @@
+.wacker-loop {
+  margin-right: -$loopItemPadding;
+  margin-left: -$loopItemPadding;
+
+  .wacker-loop-row {
+    @include respond-to(tablet) {
+      margin-bottom: 40px;
+    }
+
+    &:last-child {
+      margin-bottom: 0px;
+    }
+  }
+
+  .wacker-loop-row-tablet {
+    @include respond-to(desktop) {
+      display: none;
+    }
+  }
+
+  .wacker-loop-row-desktop {
+    @include respond-to-max(desktop) {
+      display: none;
+    }
+  }
+}

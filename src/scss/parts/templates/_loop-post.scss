@@ -1,0 +1,21 @@
+$loopItemPadding: 10px;
+
+.wacker-loop-post {
+  padding: 0px $loopItemPadding;
+
+  @include respond-to-max(tablet) {
+    margin-bottom: 70px;
+  }
+
+  h3 {
+    margin-top: 0px;
+  }
+
+  .wacker-loop-post-excerpt {
+    margin-bottom: 40px;
+
+    @include respond-to(desktop) {
+      margin-bottom: 25px;
+    }
+  }
+}
