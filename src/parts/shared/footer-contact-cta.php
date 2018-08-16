@@ -2,7 +2,7 @@
 if ( get_field('show_footer_contact_cta') ) {
 ?>
 
-<div class="row footer-contact-cta" style="background-image: url('wp-content/uploads/2018/08/IMG_3410.jpg');">
+<div class="row footer-contact-cta" style="background-image: url('/wp-content/uploads/2018/08/IMG_3410.jpg');">
 
   <div class="footer-contact-cta-content-wrapper">
 
