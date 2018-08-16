@@ -129,6 +129,82 @@ class E_Wacker_ACF {
       	'active' => 1,
       ));
 
+      // add links section
+      acf_add_local_field_group(array(
+      	'key' => 'group_5b759c48d9cbc',
+      	'title' => 'Links Section',
+      	'fields' => array(
+      		array(
+      			'key' => 'field_5b759c4f11a73',
+      			'label' => 'Links',
+      			'name' => 'links_section_links',
+      			'type' => 'repeater',
+      			'collapsed' => 'field_5b759cb611a75',
+      			'layout' => 'table',
+      			'button_label' => 'Add Link',
+      			'sub_fields' => array(
+      				array(
+      					'key' => 'field_5b759c7711a74',
+      					'label' => 'Image',
+      					'name' => 'image',
+      					'type' => 'image',
+      					'required' => 1,
+      					'return_format' => 'url',
+      					'preview_size' => 'medium',
+      					'library' => 'all',
+      				),
+      				array(
+      					'key' => 'field_5b759cb611a75',
+      					'label' => 'Title',
+      					'name' => 'title',
+      					'type' => 'text',
+      					'required' => 1,
+      				),
+      				array(
+      					'key' => 'field_5b759cc311a76',
+      					'label' => 'CTA Text',
+      					'name' => 'cta_text',
+      					'type' => 'text',
+      					'default_value' => 'Learn More',
+      					'placeholder' => 'Learn More',
+      				),
+              array(
+      					'key' => 'field_5b759ce311a77',
+      					'label' => 'CTA Link',
+      					'name' => 'cta_link',
+      					'type' => 'page_link',
+      					'required' => 1,
+      					'post_type' => array(
+      						0 => 'page',
+      						1 => 'post',
+      					),
+      					'allow_null' => 0,
+      					'allow_archives' => 1,
+      					'multiple' => 0,
+      				),
+      			),
+      		),
+      	),
+      	'location' => array(
+      		array(
+      			array(
+      				'param' => 'post_type',
+      				'operator' => '==',
+      				'value' => 'page',
+      			),
+      		),
+      	),
+      	'menu_order' => 0,
+      	'position' => 'normal',
+      	'style' => 'default',
+      	'label_placement' => 'top',
+      	'instruction_placement' => 'label',
+      	'hide_on_screen' => '',
+      	'active' => 1,
+      	'description' => '',
+      ));
+
+
       endif;
   }
 }
