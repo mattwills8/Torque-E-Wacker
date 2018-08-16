@@ -1,0 +1,68 @@
+$loopItemPadding: 12px;
+$orangeBackgroundHeight: 185px;
+$orangeBackgroundHeightTablet: 157px;
+$orangeBackgroundHeightDesktop: 250px;
+
+.wacker-links-section-loop-row {
+  .links-section-link {
+    position: relative;
+    padding: 50px 0px 65px 0px;
+    text-align: center;
+
+    @include respond-to(tablet) {
+      padding: 40px $loopItemPadding 40px $loopItemPadding;
+    }
+
+    .links-section-orange-background-mobile {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: -$mobileMainPadding;
+      z-index: 0;
+      width: 100vw;
+      height: $orangeBackgroundHeight;
+      background-color: $orange;
+
+      @include respond-to-max(tablet) {
+        display: block;
+      }
+    }
+
+    .links-section-link-image-wrapper {
+      position: relative;
+      z-index: 2;
+      margin: 0 auto;
+      margin-bottom: 40px;
+      width: 250px;
+      max-width: 100%;
+      height: auto;
+
+      @include respond-to(tablet) {
+        margin-bottom: 30px;
+      }
+
+      @include respond-to(desktop) {
+        margin-bottom: 50px;
+        width: 375px;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    h3 {
+      margin: 0;
+      margin-bottom: 20px;
+    }
+  }
+
+  &:first-child {
+    .links-section-link {
+      @include respond-to(tablet) {
+      }
+    }
+  }
+}

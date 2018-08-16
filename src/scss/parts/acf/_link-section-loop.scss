@@ -1,0 +1,81 @@
+.wacker-links-section-loop {
+  padding-bottom: 40px;
+
+  .wacker-links-section-tablet {
+    @include respond-to(desktop) {
+      display: none;
+    }
+  }
+
+  .wacker-links-section-desktop {
+    @include respond-to-max(desktop) {
+      display: none;
+    }
+  }
+
+  .wacker-links-section-loop-row {
+    position: relative;
+    margin-right: -$loopItemPadding;
+    margin-left: -$loopItemPadding;
+    padding: 0px $mobileMainPadding + $loopItemPadding;
+
+    @include respond-to(tablet) {
+      padding: 0px $tabletMainPadding;
+    }
+
+    @include respond-to(desktop) {
+      padding: 0px $desktopMainPadding;
+    }
+
+    .links-section-orange-background {
+      display: none;
+      position: absolute;
+      top: 70px;
+      left: $loopItemPadding;
+      z-index: 0;
+      width: 100vw;
+      height: $orangeBackgroundHeight;
+      background-color: $orange;
+
+      @include respond-to(tablet) {
+        display: block;
+        height: $orangeBackgroundHeightTablet;
+      }
+
+      @include respond-to(desktop) {
+        height: $orangeBackgroundHeightDesktop;
+      }
+    }
+
+    &:first-child {
+      .links-section-orange-background {
+        top: 0px;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0px;
+
+      .links-section-orange-background {
+        @include respond-to(tablet) {
+          top: 150px;
+        }
+
+        @include respond-to(desktop) {
+          top: unset;
+          bottom: 190px;
+        }
+      }
+
+      .links-section-link-image-wrapper {
+        @include respond-to(tablet) {
+          margin-bottom: 75px;
+        }
+
+        @include respond-to(desktop) {
+          margin-bottom: 100px;
+        }
+      }
+    }
+  }
+}

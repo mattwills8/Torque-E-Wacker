@@ -1,3 +1,5 @@
+<?php get_template_part( 'parts/acf/links-section', 'loop' ); ?>
+
 <footer id="footer">
 
   <?php get_template_part( 'parts/shared/footer', 'contact-cta' ); ?>
