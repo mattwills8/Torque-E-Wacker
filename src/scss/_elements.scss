@@ -12,9 +12,21 @@ button {
   outline: none;
   text-align: center;
 
-  &.bg-white {
-    color: $orange;
+  &:hover {
+    border: 2px solid $orange;
+    padding: 13px 43px 14px 43px;
     background-color: $white;
+    color: $orange;
+  }
+
+  &.bg-white {
+    background-color: $white;
+    color: $orange;
+
+    &:hover {
+      background-color: $orange;
+      color: white;
+    }
   }
 
   &.button-icon {
@@ -32,15 +44,33 @@ button {
       height: 13px;
     }
 
+    &:hover {
+      &::after {
+        content: url(' ../images/link-icon-orange.svg ');
+      }
+    }
+
     &.bg-white {
       &::after {
         content: url(' ../images/link-icon-orange.svg ');
+      }
+
+      &:hover {
+        &::after {
+          content: url(' ../images/link-icon.svg ');
+        }
       }
     }
 
     &.download {
       &::after {
         content: url(' ../images/download-icon.svg ');
+      }
+
+      &:hover {
+        &::after {
+          content: url(' ../images/download-icon-orange.svg ');
+        }
       }
     }
   }
