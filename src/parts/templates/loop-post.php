@@ -12,7 +12,9 @@ $forms = get_field('post_forms');
   <?php if ($show_link) {
     $id = $post->post_type.'-'.$post->ID;
     ?>
-    <div id="<?php echo $id; ?>" class="wacker-loop-post-link-button">Change Me</div>
+    <div id="<?php echo $id; ?>" class="wacker-loop-post-link-button">
+      <img src="/wp-content/uploads/2018/08/anchor-icon.png" />
+    </div>
   <?php } ?>
 
   <h3><?php the_title(); ?></h3>
