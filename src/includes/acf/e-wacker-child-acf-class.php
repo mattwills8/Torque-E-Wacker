@@ -22,15 +22,8 @@ class E_Wacker_ACF {
       // add page settings
       acf_add_local_field_group(array(
       	'key' => 'group_5b7181e5baf1f',
-      	'title' => 'Page Settings',
+      	'title' => 'Torque Page Settings',
       	'fields' => array(
-      		array(
-      			'key' => 'field_5b7181ea372fb',
-      			'label' => 'Show Footer Contact CTA',
-      			'name' => 'show_footer_contact_cta',
-      			'type' => 'true_false',
-      			'default_value' => 0,
-      		),
           array(
       			'key' => 'field_5b73f9b41c0f2',
       			'label' => 'Show Post Loop',
@@ -93,14 +86,46 @@ class E_Wacker_ACF {
       	'position' => 'side',
       ));
 
+      // add footer settings
+      acf_add_local_field_group(array(
+      	'key' => 'group_5b75c5be7ffd2',
+      	'title' => 'Torque Footer Settings',
+      	'fields' => array(
+      		array(
+      			'key' => 'field_5b75c5c3b2a37',
+      			'label' => 'Show Footer Contact CTA',
+      			'name' => 'show_footer_contact_cta',
+      			'type' => 'true_false',
+      		),
+      	),
+      	'location' => array(
+      		array(
+      			array(
+      				'param' => 'post_type',
+      				'operator' => '==',
+      				'value' => 'post',
+      			),
+      		),
+      		array(
+      			array(
+      				'param' => 'post_type',
+      				'operator' => '==',
+      				'value' => 'page',
+      			),
+      		),
+      	),
+      	'position' => 'side',
+      	'active' => 1,
+      ));
+
       // add post meta
       acf_add_local_field_group(array(
       	'key' => 'group_5b742ba01da18',
-      	'title' => 'Post Meta',
+      	'title' => 'Torque Post Meta',
       	'fields' => array(
       		array(
       			'key' => 'field_5b742bbbc45a7',
-      			'label' => 'Show Link Button',
+      			'label' => 'Show Anchor Icon in Loop',
       			'name' => 'show_link_button',
       			'type' => 'true_false',
       		),
@@ -132,7 +157,7 @@ class E_Wacker_ACF {
       // add links section
       acf_add_local_field_group(array(
       	'key' => 'group_5b759c48d9cbc',
-      	'title' => 'Links Section',
+      	'title' => 'Torque Links Section',
       	'fields' => array(
       		array(
       			'key' => 'field_5b759c4f11a73',
