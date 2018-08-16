@@ -10,7 +10,7 @@ $excerpt = get_the_excerpt();
 <div class="wacker-hero">
 
   <?php if ($img_src) { ?>
-    <img src="<?php echo get_the_post_thumbnail_url( null, $size = 'original' ); ?>" class="wacker-hero-image" />
+    <img src="<?php echo get_the_post_thumbnail_url( null, $size = 'original' ); ?>" class="row wacker-hero-image" />
   <?php } ?>
 
   <div class="wacker-hero-title-wrapper" >
