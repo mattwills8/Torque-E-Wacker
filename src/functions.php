@@ -28,6 +28,15 @@ if ( class_exists( 'E_Wacker_Widgets' ) ) {
    new E_Wacker_ACF();
  }
 
+/**
+ * The excerpt
+ */
+function wacker_excerpt_more($more) {
+  global $post;
+	return '...';
+}
+add_filter('excerpt_more', 'wacker_excerpt_more');
+
 
 // enqueue child styles after parent styles, both style.css and main.css
 // so child styles always get priority
