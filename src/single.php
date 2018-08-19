@@ -6,11 +6,11 @@
 		$categories = get_the_category();
 
 		$is_update = false;
-		$is_button = false;
+		$is_cat = false;
 
 		foreach ($categories as $category) {
 			// set true if we run a loop (means categories is not empty)
-			$is_button = true;
+			$is_cat = true;
 
 		  if ($category->slug === 'updates') {
 		    $is_update = true;
@@ -18,7 +18,8 @@
 		  }
 		}
 
-		$button_link = $is_button ? get_category_link( $categories[0] ) : false;
+		$cat_name = $is_cat ? $categories[0]->cat_name : false;
+		$cat_link = $is_cat ? get_category_link( $categories[0] ) : false;
 
 		?>
 
@@ -26,15 +27,15 @@
 		if ($is_update) {
 			get_template_part( 'parts/templates/titles/title', 'single-update' );
 		} else {
-			get_template_part( 'parts/templates/titles/title', 'single' );
+			include( locate_template( 'parts/templates/titles/title-single-other.php' ) );
 		}
 		?>
 
 		<?php get_template_part( 'parts/templates/content', 'single' ); ?>
 
 		<?php
-		if ($button_link) { ?>
-			<a href="<?php echo $button_link; ?>">
+		if ($cat_link) { ?>
+			<a href="<?php echo $cat_link; ?>">
 				<button>
 					<?php if ($is_update) { ?>
 							View all updates
