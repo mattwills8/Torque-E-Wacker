@@ -28,7 +28,7 @@ function bindPostAnchor($) {
         temp.val(copy).select()
 
         document.execCommand('copy')
-        alert(`Copied link: ${copy}`)
+        alert(`Copied link to clipboard: ${copy}`)
 
         // delete temp input
         temp.remove()
