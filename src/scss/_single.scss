@@ -1,0 +1,21 @@
+main#single {
+  margin: 0 auto;
+  padding: 0 $mobileMainPadding 75px $mobileMainPadding;
+  max-width: 950px;
+
+  h2 {
+    text-align: center;
+  }
+
+  article {
+    padding: 0px;
+  }
+
+  @include respond-to(tablet) {
+    padding: 0 $tabletMainPadding 75px $tabletMainPadding 75px;
+  }
+
+  @include respond-to(desktop) {
+    padding: 0 $desktopMainPadding 80px $desktopMainPadding 80px;
+  }
+}
