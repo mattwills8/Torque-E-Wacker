@@ -1,0 +1,19 @@
+.about-building-facts-wrapper {
+  h2 {
+    margin-bottom: 30px;
+    text-align: center;
+
+    @include respond-to(tablet) {
+      margin-top: 20px;
+      margin-bottom: 50px;
+    }
+
+    @include respond-to(tablet) {
+      margin-top: 5px;
+    }
+  }
+
+  h3 {
+    margin: 0;
+  }
+}

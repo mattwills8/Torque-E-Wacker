@@ -6,7 +6,13 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-  <?php get_template_part( 'parts/templates/content-loop', 'building-facts' ); ?> 
+  <div class="about-building-facts-wrapper">
+
+    <h2>Building Facts</h2>
+
+    <?php get_template_part( 'parts/templates/content-loop', 'building-facts' ); ?>
+
+  </div>
 
 	<div class="content page-content">
 		<?php
