@@ -38,6 +38,28 @@ function wacker_excerpt_more($more) {
 add_filter('excerpt_more', 'wacker_excerpt_more');
 
 
+/**
+ * Torque map
+ */
+
+ // add api key for torque map
+ add_filter( 'torque_map_api_key', function($k) {
+   return 'AIzaSyDPF2QsUSJKHsmGoPcjIgRySglSZgD-asA';
+ });
+ // add allowed pois for theme
+ add_filter( 'torque_map_pois_allowed', function($n) {
+   return 5;
+ });
+ // whether to display the POI list or not
+ add_filter( 'torque_map_display_pois_list', function($n) {
+   return true;
+ });
+ // display pois below map and above pois list
+ add_filter( 'torque_map_pois_location', function($n) {
+   return 'middle';
+ });
+
+
 // enqueue child styles after parent styles, both style.css and main.css
 // so child styles always get priority
 add_action( 'wp_enqueue_scripts', 'torque_enqueue_child_styles' );
