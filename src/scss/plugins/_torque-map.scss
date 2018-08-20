@@ -1,0 +1,148 @@
+.torque-map {
+  .torque-map-pois {
+    margin: 20px 0px;
+    margin-bottom: 20px;
+    text-align: center;
+
+    @include respond-to(tablet) {
+      margin: 35px 0px;
+      margin-bottom: 20px;
+    }
+
+    .torque-map-poi {
+      button {
+        margin: 5px 10px;
+        padding: 5px 30px 4px 30px;
+      }
+
+      &:hover,
+      &.active {
+        button {
+          border: 2px solid $orange;
+          background-color: transparent;
+          color: $orange;
+          padding: 3px 28px 2px 28px;
+        }
+      }
+
+      &:nth-child(1) {
+        button {
+          background-color: $gold;
+        }
+
+        &:hover,
+        &.active {
+          button {
+            border: 2px solid $gold;
+            background-color: transparent;
+            color: $gold;
+          }
+        }
+      }
+      &:nth-child(2) {
+        button {
+          background-color: $yellow;
+        }
+
+        &:hover,
+        &.active {
+          button {
+            background-color: transparent;
+            border-color: $yellow;
+            color: $yellow;
+          }
+        }
+      }
+      &:nth-child(4) {
+        button {
+          background-color: $turqoise;
+        }
+
+        &:hover,
+        &.active {
+          button {
+            background-color: transparent;
+            border-color: $turqoise;
+            color: $turqoise;
+          }
+        }
+      }
+      &:nth-child(5) {
+        button {
+          background-color: $green;
+        }
+
+        &:hover,
+        &.active {
+          button {
+            background-color: transparent;
+            border-color: $green;
+            color: $green;
+          }
+        }
+      }
+    }
+
+    h3 {
+      margin-top: 20px;
+      margin-bottom: 0px;
+      text-transform: uppercase;
+
+      @include respond-to(tablet) {
+        margin-top: 35px;
+      }
+    }
+  }
+
+  .torque-map-pois-list {
+    @include row();
+
+    .torque-map-pois-list-item {
+      position: relative;
+      padding: 5px 20px;
+
+      @include col(1);
+
+      @include respond-to(tablet) {
+        @include col(2);
+      }
+
+      .torque-map-pois-list-item-name {
+        float: left;
+        display: inline-block;
+        border-bottom: 1px solid $gold;
+        padding-right: 50%;
+        width: 100%;
+        box-sizing: border-box;
+
+        @include respond-to(tablet) {
+          padding-right: 30%;
+        }
+      }
+
+      .torque-map-pois-list-item-distance {
+        position: absolute;
+        display: inline-block;
+        top: 0;
+        right: 20px;
+      }
+    }
+  }
+
+  .torque-map-container {
+    width: 100vw;
+    margin-left: -$mobileMainPadding;
+
+    @include respond-to-max(tablet) {
+      padding-top: 300px;
+    }
+
+    @include respond-to(tablet) {
+      margin-left: -$tabletMainPadding;
+    }
+
+    @include respond-to(desktop) {
+      margin-left: -$desktopMainPadding;
+    }
+  }
+}
