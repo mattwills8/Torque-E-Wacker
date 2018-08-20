@@ -1,0 +1,15 @@
+.wacker-loop-staff {
+  padding: 0 10px;
+
+  @include respond-to-max(tablet) {
+    margin-bottom: 50px;
+  }
+
+  h3.wacker-loop-staff-title {
+    margin: 0;
+  }
+
+  .wacker-loop-staff-content {
+    margin: 25px 0px;
+  }
+}

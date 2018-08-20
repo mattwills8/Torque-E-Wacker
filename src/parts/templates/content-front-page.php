@@ -17,7 +17,7 @@
 	include( locate_template( 'parts/templates/content-loop-responsive.php', false, false ) ); ?>
 
   <div class="front-page-button-wrapper">
-    <a href="/whats-new">
+    <a href="/category/updates/">
       <button>View All updates</button>
     </a>
   </div>

@@ -7,14 +7,6 @@ $loopItemPadding: 10px;
     margin-bottom: 70px;
   }
 
-  .wacker-loop-post-link-button {
-    width: 15px;
-
-    img {
-      width: 100%;
-    }
-  }
-
   h3 {
     margin-top: 0px;
   }
@@ -33,5 +25,13 @@ $loopItemPadding: 10px;
     @include respond-to(desktop) {
       margin-top: 25px;
     }
+  }
+}
+
+.wacker-loop-post-link-button {
+  width: 15px;
+
+  img {
+    width: 100%;
   }
 }

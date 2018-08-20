@@ -1,0 +1,64 @@
+$topBottomPadding: 40px;
+$topBottomPaddingTablet: 60px;
+
+.page-template-operations {
+  article {
+    padding: 0;
+
+    .wacker-operation-wrapper {
+      position: relative;
+      padding: $topBottomPadding $mobileMainPadding;
+
+      &:nth-child(2n) {
+        background-color: $light-grey;
+      }
+
+      @include respond-to(tablet) {
+        padding: $topBottomPaddingTablet $tabletMainPadding;
+      }
+
+      @include respond-to(desktop) {
+        padding: $topBottomPaddingTablet $desktopMainPadding;
+      }
+
+      .wacker-loop-operation-link-button {
+        position: absolute;
+        left: $mobileMainPadding - 30px;
+        top: $topBottomPadding + 5px;
+
+        @include respond-to(tablet) {
+          left: $tabletMainPadding - 30px;
+          top: $topBottomPaddingTablet + 15px;
+        }
+
+        @include respond-to(desktop) {
+          left: $desktopMainPadding - 30px;
+          top: $topBottomPaddingTablet + 20px;
+        }
+      }
+
+      h2.wacker-operation-title {
+        margin-top: 0px;
+        margin-bottom: $topBottomPadding -10px;
+
+        @include respond-to(tablet) {
+          margin-bottom: $topBottomPaddingTablet -10px;
+        }
+      }
+
+      .wacker-operation-col1 {
+        padding-right: 10%;
+
+        @include respond-to-max(tablet) {
+          padding-right: 0px;
+        }
+      }
+
+      .wacker-operation-col2 {
+        @include respond-to-max(tablet) {
+          padding-top: 25px;
+        }
+      }
+    }
+  }
+}

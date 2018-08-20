@@ -11,7 +11,7 @@
 <div class="wacker-loop" >
 
     <?php
-    $found_posts = $num_posts ? min((int) $query->found_posts, (int) $num_posts) : $query->found_posts;
+    $found_posts = $num_posts && $num_posts > 0 ? min((int) $query->found_posts, (int) $num_posts) : $query->found_posts;
 
     $post_count = 0;
 
