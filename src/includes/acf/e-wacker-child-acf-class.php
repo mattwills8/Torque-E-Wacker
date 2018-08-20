@@ -162,6 +162,59 @@ class E_Wacker_ACF {
       	'description' => '',
       ));
 
+      // add operations
+      acf_add_local_field_group(array(
+      	'key' => 'group_5b7b241a5920e',
+      	'title' => 'Operations',
+      	'fields' => array(
+      		array(
+      			'key' => 'field_5b7b250f29a46',
+      			'label' => 'Operations',
+      			'name' => 'operations',
+      			'type' => 'repeater',
+      			'collapsed' => 'field_5b7b258729a47',
+      			'layout' => 'row',
+      			'sub_fields' => array(
+      				array(
+      					'key' => 'field_5b7b258729a47',
+      					'label' => 'Title',
+      					'name' => 'title',
+      					'type' => 'text',
+      					'required' => 1,
+      				),
+      				array(
+      					'key' => 'field_5b7b259e29a48',
+      					'label' => 'Content Col 1',
+      					'name' => 'content_col_1',
+      					'type' => 'wysiwyg',
+      					'tabs' => 'all',
+      					'toolbar' => 'full',
+      					'media_upload' => 1,
+      				),
+      				array(
+      					'key' => 'field_5b7b25b629a49',
+      					'label' => 'Content Col 2',
+      					'name' => 'content_col_2',
+      					'type' => 'wysiwyg',
+      					'tabs' => 'all',
+      					'toolbar' => 'full',
+      					'media_upload' => 1,
+      				),
+      			),
+      		),
+      	),
+      	'location' => array(
+      		array(
+      			array(
+      				'param' => 'post_template',
+      				'operator' => '==',
+      				'value' => 'operations.php',
+      			),
+      		),
+      	),
+      	'active' => 1,
+      ));
+
 
       endif;
   }
