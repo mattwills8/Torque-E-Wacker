@@ -1,0 +1,31 @@
+$topBottomPadding: 30px;
+$topBottomPaddingTablet: 40px;
+
+.wacker-loop-amenities {
+  position: relative;
+  border-bottom: 1px solid $black;
+  padding: $topBottomPadding 0px;
+
+  @include respond-to(tablet) {
+    padding: $topBottomPaddingTablet 0px;
+  }
+
+  .wacker-loop-post-link-button {
+    position: absolute;
+    left: -30px;
+    top: $topBottomPadding + 40px;
+    width: 15px;
+
+    @include respond-to(tablet) {
+      top: $topBottomPaddingTablet + 40px;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .wacker-loop-post-forms-button {
+    margin-top: 40px;
+  }
+}
