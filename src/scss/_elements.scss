@@ -46,6 +46,9 @@ button {
     }
 
     &:hover {
+      padding-left: 28px;
+      padding-right: 58px;
+
       &::after {
         content: url(' ../images/link-icon-orange.svg ');
       }
