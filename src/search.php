@@ -10,11 +10,15 @@
   <?php get_template_part( 'parts/templates/titles/title', 'search' ); ?>
 
   <div class="search-loop">
-  	<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+    <div class="search-loop-inner">
+    	<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
-      <?php get_template_part( 'parts/templates/loop', 'search' ); ?>
+        <?php get_template_part( 'parts/templates/loop', 'search' ); ?>
 
-  	<?php endwhile; ?>
+    	<?php endwhile; ?>
+    </div>
+
+    <?php get_template_part( 'parts/elements/pagination/pagination', 'buttons' ); ?>
   </div>
 
 </main>
