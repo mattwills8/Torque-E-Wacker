@@ -1,0 +1,29 @@
+.contact-inner {
+  .contact-col {
+    @include respond-to(tablet) {
+      padding-right: 30px;
+    }
+
+    .contact-column-row {
+      margin-bottom: 30px;
+
+      @include respond-to(tablet) {
+        &:last-child {
+          margin-bottom: 0px;
+        }
+      }
+
+      h3 {
+        margin-top: 0;
+      }
+
+      a {
+        word-wrap: break-word;
+      }
+    }
+  }
+
+  .contact-left-col {
+    margin-bottom: 50px;
+  }
+}
