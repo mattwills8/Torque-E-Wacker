@@ -9,11 +9,14 @@
 
   <?php get_template_part( 'parts/templates/titles/title', 'search' ); ?>
 
-	<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+  <div class="search-loop">
+  	<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
-    <?php get_template_part( 'parts/templates/loop', 'search' ); ?>
+      <?php get_template_part( 'parts/templates/loop', 'search' ); ?>
 
-	<?php endwhile; ?>
+  	<?php endwhile; ?>
+  </div>
+  
 </main>
 
 <?php TQ::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) ); ?>

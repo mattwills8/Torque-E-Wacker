@@ -1,0 +1,15 @@
+$topBottomPadding: 40px;
+$topBottomPaddingTablet: 60px;
+
+.search-loop {
+  padding: $topBottomPadding $mobileMainPadding;
+  max-width: $contentMaxWidth;
+
+  @include respond-to(tablet) {
+    padding: $topBottomPaddingTablet $tabletMainPadding;
+  }
+
+  @include respond-to(desktop) {
+    padding: $topBottomPaddingTablet $desktopMainPadding;
+  }
+}

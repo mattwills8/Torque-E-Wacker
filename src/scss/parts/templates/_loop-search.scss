@@ -1,0 +1,8 @@
+.loop-post {
+  border-bottom: 1px solid $black;
+  padding: 20px 0px;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
