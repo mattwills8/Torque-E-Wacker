@@ -216,6 +216,94 @@ class E_Wacker_ACF {
       ));
 
 
+      // contact page
+      acf_add_local_field_group(array(
+      	'key' => 'group_5b7c6009e6a78',
+      	'title' => 'Contact',
+      	'fields' => array(
+      		array(
+      			'key' => 'field_5b7c6021a1968',
+      			'label' => 'Address',
+      			'name' => 'address',
+      			'type' => 'wysiwyg',
+      			'instructions' => '',
+      		),
+      		array(
+      			'key' => 'field_5b7c61a1a1969',
+      			'label' => 'Telephone',
+      			'name' => 'telephone',
+      			'type' => 'text',
+      		),
+      		array(
+      			'key' => 'field_5b7c61aaa196a',
+      			'label' => 'Fax',
+      			'name' => 'fax',
+      			'type' => 'text',
+      		),
+      		array(
+      			'key' => 'field_5b7c61b9a196b',
+      			'label' => 'Column 1',
+      			'name' => 'column_1',
+      			'type' => 'repeater',
+      			'layout' => 'row',
+      			'button_label' => '',
+      			'sub_fields' => array(
+      				array(
+      					'key' => 'field_5b7c61cea196c',
+      					'label' => 'Title',
+      					'name' => 'title',
+      					'type' => 'text',
+      				),
+      				array(
+      					'key' => 'field_5b7c61dca196d',
+      					'label' => 'Content',
+      					'name' => 'content',
+      					'type' => 'wysiwyg',
+      				),
+      			),
+      		),
+      		array(
+      			'key' => 'field_5b7c61eba196e',
+      			'label' => 'Column 2',
+      			'name' => 'column_2',
+      			'type' => 'repeater',
+      			'layout' => 'row',
+      			'button_label' => '',
+      			'sub_fields' => array(
+      				array(
+      					'key' => 'field_5b7c61f6a196f',
+      					'label' => 'Title',
+      					'name' => 'title',
+      					'type' => 'text',
+      				),
+      				array(
+      					'key' => 'field_5b7c6213a1970',
+      					'label' => 'Content',
+      					'name' => 'content',
+      					'type' => 'wysiwyg',
+      				),
+      			),
+      		),
+      	),
+      	'location' => array(
+      		array(
+      			array(
+      				'param' => 'post_template',
+      				'operator' => '==',
+      				'value' => 'contact.php',
+      			),
+      		),
+      	),
+      	'menu_order' => 0,
+      	'position' => 'normal',
+      	'style' => 'default',
+      	'label_placement' => 'top',
+      	'instruction_placement' => 'label',
+      	'hide_on_screen' => '',
+      	'active' => 1,
+      	'description' => '',
+      ));
+
       endif;
   }
 }
