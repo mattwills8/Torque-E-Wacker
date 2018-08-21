@@ -59,7 +59,7 @@ h2 {
   }
 }
 
-h3 {
+%h3 {
   margin: 10px 0px;
   font-family: $Futura;
   font-size: 27px;
@@ -69,6 +69,10 @@ h3 {
   line-height: normal;
   letter-spacing: normal;
   color: $black;
+}
+
+h3 {
+  @extend %h3;
 }
 
 h4 {
