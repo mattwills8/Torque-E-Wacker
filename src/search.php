@@ -16,7 +16,7 @@
 
   	<?php endwhile; ?>
   </div>
-  
+
 </main>
 
-<?php TQ::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) ); ?>
+<?php TQ::get_template_parts( array( 'parts/shared/footer-search','parts/shared/html-footer' ) ); ?>
