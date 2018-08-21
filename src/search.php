@@ -9,7 +9,7 @@
 
   <?php get_template_part( 'parts/templates/titles/title', 'search' ); ?>
 
-  <div class="search-loop">
+  <div class="wacker-loop search-loop">
     <div class="search-loop-inner">
     	<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 

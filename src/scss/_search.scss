@@ -12,8 +12,4 @@ $topBottomPaddingTablet: 60px;
   @include respond-to(desktop) {
     padding: $topBottomPaddingTablet $desktopMainPadding;
   }
-
-  .search-loop-inner {
-    margin-bottom: 30px;
-  }
 }
