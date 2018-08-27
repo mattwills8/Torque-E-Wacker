@@ -27,3 +27,29 @@
     margin-bottom: 50px;
   }
 }
+
+.contact-details {
+  margin-bottom: 50px;
+
+  &:last-child {
+    margin-bottom: 40px;
+  }
+
+  @include respond-to(tablet) {
+    margin-bottom: 0px;
+  }
+
+  @include respond-to(desktop) {
+    margin-bottom: 50px;
+
+    &:last-child {
+      margin-bottom: 0px;
+    }
+  }
+
+  img.contact-icon {
+    width: 25px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+}
