@@ -21,6 +21,7 @@
 
   p {
     margin-bottom: 30px;
+    color: $white;
 
     @include respond-to(tablet) {
       margin-bottom: 60px;
