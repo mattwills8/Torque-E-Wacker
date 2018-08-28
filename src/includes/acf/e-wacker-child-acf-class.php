@@ -7,13 +7,13 @@ class E_Wacker_ACF {
     add_action('acf/init', array( $this, 'acf_init' ) );
 
     // hide acf in admin - client doesnt need to see this
-    // add_filter('acf/settings/show_admin', '__return_false');
+    add_filter('acf/settings/show_admin', '__return_false');
   }
 
 
   public function acf_admin_init() {
     // hide options page
-    // remove_menu_page('acf-options');
+    remove_menu_page('acf-options');
   }
 
   public function acf_init() {
