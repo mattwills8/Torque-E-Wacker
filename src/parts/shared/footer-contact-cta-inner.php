@@ -7,10 +7,14 @@
 
     <div class="footer-contact-cta-buttons">
       <div class="button-wrapper">
-        <button class="bg-white">Contact Us</button>
+        <a href="/contact">
+          <button class="bg-white">Contact Us</button>
+        </a>
       </div>
       <div class="button-wrapper">
-        <button class="bg-white button-icon">Leasing</button>
+        <a href="/leasing">
+          <button class="bg-white button-icon">Leasing</button>
+        </a>
       </div>
     </div>
 
