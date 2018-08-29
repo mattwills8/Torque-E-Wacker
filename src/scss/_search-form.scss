@@ -5,6 +5,8 @@ form.search-form {
   text-align: left;
 
   .search-input {
+    float: left;
+    width: 120px;
     border: none;
     outline: none;
 
@@ -18,16 +20,16 @@ form.search-form {
     position: relative;
     padding: 0;
     width: 13px;
-    height: 13px;
+    height: 14px;
     background-color: unset;
 
     &::after {
       content: url(" ../images/search-icon.svg ");
       position: absolute;
-      top: 0;
+      top: 5px;
       left: 0;
       width: 13px;
-      height: 13px;
+      height: 14px;
     }
 
     &:hover {
