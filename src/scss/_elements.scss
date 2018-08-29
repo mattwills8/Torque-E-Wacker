@@ -9,6 +9,7 @@ button {
   font-style: normal;
   font-stretch: normal;
   letter-spacing: 0.1px;
+  line-height: 1;
   outline: none;
   text-align: center;
   cursor: pointer;
@@ -36,10 +37,10 @@ button {
     padding-right: 60px;
 
     &::after {
-      content: url(' ../images/link-icon.svg ');
+      content: url(" ../images/link-icon.svg ");
       position: absolute;
       right: 30px;
-      top: 40%;
+      top: 45%;
       transform: translateY(-50%);
       width: 13px;
       height: 13px;
@@ -50,30 +51,30 @@ button {
       padding-right: 58px;
 
       &::after {
-        content: url(' ../images/link-icon-orange.svg ');
+        content: url(" ../images/link-icon-orange.svg ");
       }
     }
 
     &.bg-white {
       &::after {
-        content: url(' ../images/link-icon-orange.svg ');
+        content: url(" ../images/link-icon-orange.svg ");
       }
 
       &:hover {
         &::after {
-          content: url(' ../images/link-icon.svg ');
+          content: url(" ../images/link-icon.svg ");
         }
       }
     }
 
     &.download {
       &::after {
-        content: url(' ../images/download-icon.svg ');
+        content: url(" ../images/download-icon.svg ");
       }
 
       &:hover {
         &::after {
-          content: url(' ../images/download-icon-orange.svg ');
+          content: url(" ../images/download-icon-orange.svg ");
         }
       }
     }
