@@ -13,7 +13,7 @@ form.search-form {
     }
   }
 
-  .search-icon {
+  button.search-icon {
     float: right;
     position: relative;
     padding: 0;
@@ -22,12 +22,16 @@ form.search-form {
     background-color: unset;
 
     &::after {
-      content: url(' ../images/search-icon.svg ');
+      content: url(" ../images/search-icon.svg ");
       position: absolute;
       top: 0;
       left: 0;
       width: 13px;
       height: 13px;
+    }
+
+    &:hover {
+      border: none;
     }
   }
 }
