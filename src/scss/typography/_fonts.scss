@@ -1,31 +1,41 @@
 @font-face {
   font-family: Jost;
-  src: url('../statics/fonts/Jost/OpenType/Jost-300-Light.otf')
-      format('opentype'),
-    url('../statics/fonts/Jost/TrueType/Jost-300-Light.ttf') format('truetype');
+  src: url("../statics/fonts/Jost/OpenType/Jost-300-Light.otf")
+      format("opentype"),
+    url("../statics/fonts/Jost/TrueType/Jost-300-Light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: Jost;
-  src: url('../statics/fonts/Jost/OpenType/Jost-400-Book.otf')
-      format('opentype'),
-    url('../statics/fonts/Jost/TrueType/Jost-400-Book.ttf') format('truetype');
+  src: url("../statics/fonts/Jost/OpenType/Jost-400-Book.otf")
+      format("opentype"),
+    url("../statics/fonts/Jost/TrueType/Jost-400-Book.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: Jost;
-  src: url('../statics/fonts/Jost/OpenType/Jost-500-Medium.otf')
-      format('opentype'),
-    url('../statics/fonts/Jost/TrueType/Jost-500-Medium.ttf') format('truetype');
+  src: url("../statics/fonts/Jost/OpenType/Jost-500-Medium.otf")
+      format("opentype"),
+    url("../statics/fonts/Jost/TrueType/Jost-500-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Diplomata+SC');
+@font-face {
+  font-family: Engravers;
+  src: url("../statics/fonts/Engravers/EngraversLH-BoldFace.otf")
+      format("opentype"),
+    url("../statics/fonts/Engravers/EngraversLH-BoldFace.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 
-$Engravers: 'Diplomata SC', cursive;
-$Futura: 'Jost';
+@import url("https://fonts.googleapis.com/css?family=Diplomata+SC");
+
+$Engravers: "Engravers";
+$Futura: "Jost";
