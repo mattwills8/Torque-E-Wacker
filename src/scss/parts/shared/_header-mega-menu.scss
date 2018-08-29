@@ -70,7 +70,7 @@
           text-align: right;
 
           &::after {
-            content: '';
+            content: "";
             display: inline-block;
             border: solid $white;
             border-width: 0 3px 3px 0;
@@ -123,6 +123,15 @@
 
       .mega-menu-child-items-wrapper {
         display: none;
+
+        &.mega-menu-contact-details-wrapper {
+          display: block;
+          color: $white;
+
+          .mega-menu-contact-details-address {
+            margin-bottom: 10px;
+          }
+        }
       }
     }
   }

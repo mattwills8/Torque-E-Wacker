@@ -21,9 +21,13 @@ function e_wacker_mega_menu_children( $parent ) {
 }
 add_action( Torque_Mega_Menu_Utilities::$post_parent_item_handle, 'e_wacker_mega_menu_children' );
 
+$address = get_field('address', 'options');
+$telephone = get_field('telephone', 'options');
+$fax = get_field('fax', 'options');
+
 ?>
 
-<div id="mega-menu-entry" class="col4 col3-tablet header-menu-wrapper">
+<div id="mega-menu-entry" class="col4 col3-tablet header-menu-wrapper children-showing">
   <div class="mega-menu-highlight-box" >
     <?php get_template_part( 'parts/elements/element', 'burger-menu'); ?>
     <div class="header-burger-menu-text">MENU</div>
@@ -51,6 +55,29 @@ add_action( Torque_Mega_Menu_Utilities::$post_parent_item_handle, 'e_wacker_mega
     </div>
 
     <div class="col2-tablet children-items-wrapper" >
+
+      <div class="mega-menu-child-items-wrapper mega-menu-contact-details-wrapper" data-parent-id="0">
+        <h3 class="children-items-title">Visit</h3>
+
+        <?php if ($address) { ?>
+          <div class="mega-menu-contact-details-address">
+            <?php echo $address; ?>
+          </div>
+        <?php } ?>
+
+        <?php if ($telephone) { ?>
+          <p class="mega-menu-contact-details-telephone">
+            T: <?php echo $telephone; ?>
+          </p>
+        <?php } ?>
+
+        <?php if ($fax) { ?>
+          <p class="mega-menu-contact-details-fax">
+            F: <?php echo $fax; ?>
+          </p>
+        <?php } ?>
+
+      </div>
 
       <?php
         foreach ($items as $key => $parent) { ?>
