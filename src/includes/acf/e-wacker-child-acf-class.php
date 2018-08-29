@@ -13,7 +13,7 @@ class E_Wacker_ACF {
 
   public function acf_admin_init() {
     // hide options page
-    remove_menu_page('acf-options');
+    // remove_menu_page('acf-options');
   }
 
   public function acf_init() {
@@ -216,25 +216,6 @@ class E_Wacker_ACF {
       	'title' => 'Contact',
       	'fields' => array(
       		array(
-      			'key' => 'field_5b7c6021a1968',
-      			'label' => 'Address',
-      			'name' => 'address',
-      			'type' => 'wysiwyg',
-      			'instructions' => '',
-      		),
-      		array(
-      			'key' => 'field_5b7c61a1a1969',
-      			'label' => 'Telephone',
-      			'name' => 'telephone',
-      			'type' => 'text',
-      		),
-      		array(
-      			'key' => 'field_5b7c61aaa196a',
-      			'label' => 'Fax',
-      			'name' => 'fax',
-      			'type' => 'text',
-      		),
-      		array(
       			'key' => 'field_5b7c61b9a196b',
       			'label' => 'Column 1',
       			'name' => 'column_1',
@@ -296,6 +277,43 @@ class E_Wacker_ACF {
       	'hide_on_screen' => '',
       	'active' => 1,
       	'description' => '',
+      ));
+
+      // contact details (options page)
+      acf_add_local_field_group(array(
+      	'key' => 'group_5b86a1baca5fe',
+      	'title' => 'Contact Details',
+      	'fields' => array(
+          array(
+      			'key' => 'field_5b7c6021a1968',
+      			'label' => 'Address',
+      			'name' => 'address',
+      			'type' => 'wysiwyg',
+      			'instructions' => '',
+      		),
+      		array(
+      			'key' => 'field_5b7c61a1a1969',
+      			'label' => 'Telephone',
+      			'name' => 'telephone',
+      			'type' => 'text',
+      		),
+      		array(
+      			'key' => 'field_5b7c61aaa196a',
+      			'label' => 'Fax',
+      			'name' => 'fax',
+      			'type' => 'text',
+      		),
+      	),
+      	'location' => array(
+      		array(
+      			array(
+      				'param' => 'options_page',
+      				'operator' => '==',
+      				'value' => 'acf-options',
+      			),
+      		),
+      	),
+      	'active' => 1,
       ));
 
       endif;

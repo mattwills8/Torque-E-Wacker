@@ -3,8 +3,8 @@
  * Template part for displaying contact page content
  */
 
-$telephone = get_field('telephone');
-$fax = get_field('fax');
+$telephone = get_field('telephone', 'options');
+$fax = get_field('fax', 'options');
 
 ?>
 
@@ -16,7 +16,7 @@ $fax = get_field('fax');
 
       <div class="col1 col2-tablet col1-desktop contact-details contact-address">
         <img class="contact-icon" src="/wp-content/uploads/2018/08/location-pin@3x.png" />
-        <?php echo get_field('address'); ?>
+        <?php echo get_field('address', 'options'); ?>
       </div>
 
       <div class="col1 col2-tablet col1-desktop contact-details contact-phone">
@@ -32,7 +32,7 @@ $fax = get_field('fax');
         <?php } ?>
 
       </div>
-      
+
     </div>
 
     <div class="col1 col2-tablet col3-desktop contact-col contact-middle-col">
