@@ -18,7 +18,7 @@
 
   <div class="front-page-button-wrapper">
     <a href="/category/updates/">
-      <button>View All updates</button>
+      <button>View all updates</button>
     </a>
   </div>
 
