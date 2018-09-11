@@ -1,3 +1,5 @@
+$tabletMegaMenuPadding: 40px;
+
 .header-menu-wrapper {
   position: relative;
 
@@ -29,7 +31,7 @@
     background-color: $orange;
 
     @include respond-to(tablet) {
-      padding: 40px;
+      padding: $tabletMegaMenuPadding;
     }
 
     .torque-mega-menu-item {
@@ -91,6 +93,12 @@
               display: none;
             }
           }
+        }
+
+        &:hover {
+          margin-left: -$tabletMegaMenuPadding;
+          border-left: 6px solid $white;
+          padding-left: $tabletMegaMenuPadding - 6px;
         }
 
         &.children-open {
