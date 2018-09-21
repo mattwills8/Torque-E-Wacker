@@ -25,37 +25,69 @@ function bindMegaMenu($) {
     _bindParentToggle() {
       const parents = this.entry.find(".torque-mega-menu-parent-item");
 
-      parents.each((index, el) => {
-        const parent = $(el);
-        const children = parent
-          .find(".mega-menu-child-items-wrapper")
-          .first()
-          .children();
+      parents.each(this._bindParent.bind(this));
+    }
 
-        if (children.length) {
-          const childrenOpener = parent
-            .find(".torque-mega-menu-item-has-children-marker")
-            .first();
+    _bindParent(index, el) {
+      const parent = $(el);
+      const children = parent
+        .find(".mega-menu-child-items-wrapper")
+        .first()
+        .children();
 
-          childrenOpener.click(e => {
-            e.stopPropagation();
+      if (children.length) {
+        // this is the actual icon that needs to be clicked to open the second menu
+        const childrenOpener = parent
+          .find(".torque-mega-menu-item-has-children-marker")
+          .first();
 
-            const parentId = parent.attr("data-id");
-            const openChildId = this.entry.attr("data-open-parent");
-            const childGroupsWrapper = this.entry.find(
-              ".children-items-wrapper"
-            );
+        this._bindMobileFunctionality(parent, childrenOpener);
 
-            const openChildGroup = childGroupsWrapper
-              .find(`[data-parent-id="${parentId}"]`)
-              .first();
+        this._bindDesktopFunctionality(parent, childrenOpener);
+      }
+    }
 
-            // mobile only requires this line
-            parent.toggleClass("children-open");
+    _bindMobileFunctionality(parent, childrenOpener) {
+      childrenOpener.click(e => {
+        e.stopPropagation();
 
+        // mobile only requires this line
+        parent.toggleClass("children-open");
+      });
+    }
+
+    _bindDesktopFunctionality(parent, childrenOpener) {
+      // curent parent id that we're focusing on
+      const parentId = parent.attr("data-id");
+
+      // currently open id
+      const openChildId = this.entry.attr("data-open-parent");
+
+      // contains all child menus
+      const childGroupsWrapper = this.entry.find(".children-items-wrapper");
+      // find our current child menu
+      const openChildGroup = childGroupsWrapper
+        .find(`[data-parent-id="${parentId}"]`)
+        .first();
+
+      this.mouseOvers = { opener: false, menu: false };
+
+      $.each([childrenOpener, openChildGroup], (index, el) => {
+        $(el).hover(
+          e => {
             // for desktop
             if (openChildId !== parentId) {
-              // when we click on a new parent item we have to update
+              // cache whats been hovered on
+              if (index === 0) {
+                this.mouseOvers.opener = true;
+                this.mouseOvers.menu = false;
+              } else {
+                this.mouseOvers.menu = true;
+                this.mouseOvers.opener = false;
+                return;
+              }
+
+              // when we hover on a new parent item we have to update
               // the entry data-open-parent attribute
               this.entry.addClass("children-showing");
               this.entry.attr("data-open-parent", parentId);
@@ -65,25 +97,37 @@ function bindMegaMenu($) {
 
               // show new child group
               openChildGroup.show();
-            } else if (
-              openChildId &&
-              openChildId !== undefined &&
-              openChildId === parentId
-            ) {
-              // close the child tab if we click on the same parent item twice
-              this.entry.attr("data-open-parent", "0");
-
-              // hide all curent ones
-              childGroupsWrapper.children().hide();
-              // show contact details
-              childGroupsWrapper
-                .children()
-                .first()
-                .show();
             }
-          });
-        }
+          },
+          e => {
+            //on mouse leave
+
+            if (index === 0) {
+              this.mouseOvers.opener = false;
+            } else {
+              this.mouseOvers.menu = false;
+            }
+
+            this._maybeResetMenu(parent, childGroupsWrapper);
+          }
+        );
       });
+    }
+
+    _maybeResetMenu(parent, childGroupsWrapper) {
+      setTimeout(() => {
+        if (!this.mouseOvers.menu && !this.mouseOvers.opener) {
+          this.entry.attr("data-open-parent", "0");
+
+          // hide all curent ones
+          childGroupsWrapper.children().hide();
+          // show contact details
+          childGroupsWrapper
+            .children()
+            .first()
+            .show();
+        }
+      }, 2000);
     }
   }
 }

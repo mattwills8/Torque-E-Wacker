@@ -66,14 +66,16 @@ $tabletMegaMenuPadding: 40px;
         .torque-mega-menu-item-has-children-marker {
           position: absolute;
           top: 10px;
-          right: 5px;
-          transform: translateY(-50%);
-          width: 50px;
+          right: -30px;
+          transform: translateY(-12px);
+          width: 100px;
+          height: 30px;
           text-align: right;
 
           &::after {
             content: "";
             display: inline-block;
+            margin-right: 32px;
             border: solid $white;
             border-width: 0 3px 3px 0;
             padding: 3px;
