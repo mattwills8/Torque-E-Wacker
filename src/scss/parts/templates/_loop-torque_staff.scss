@@ -5,6 +5,19 @@
     margin-bottom: 50px;
   }
 
+  .featured-image {
+    margin-bottom: 10px;
+    width: 100%;
+    height: 200px;
+    background-size: contain;
+    background-position: left;
+    background-repeat: no-repeat;
+
+    @include respond-to-max(tablet) {
+      height: 250px;
+    }
+  }
+
   h3.wacker-loop-staff-title {
     margin: 0;
   }

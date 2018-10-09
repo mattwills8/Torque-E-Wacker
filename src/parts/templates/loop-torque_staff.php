@@ -6,6 +6,9 @@ $meta = get_post_meta( get_the_ID(), 'staff_meta', true );
 
 <div class="col1 col2-tablet col3-desktop wacker-loop-staff" >
 
+  <div class="featured-image" style="background-image: url(<?php echo get_the_post_thumbnail_url(); ?>);" >
+  </div>
+
   <h3 class="wacker-loop-staff-title"><?php the_title(); ?></h3>
 
   <?php if ( $meta['role'] ) { ?>
