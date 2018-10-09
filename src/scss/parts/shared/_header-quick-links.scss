@@ -19,10 +19,48 @@
 
   .torque-menu-item-wrapper {
     margin-right: 10px;
+    position: relative;
+    padding: 10px;
 
     a {
       font-weight: normal;
       color: $dark-grey;
+    }
+
+    &.parent {
+      & > .torque-menu-item-children-wrapper {
+        position: absolute;
+        width: 167px;
+        left: 0;
+        top: 100%;
+        background-color: $orange;
+        padding: 9px 18px;
+        text-align: left;
+
+        opacity: 0;
+        visibility: hidden;
+
+        & > .torque-menu-item-wrapper {
+          display: block;
+        }
+
+        a {
+          color: $white;
+        }
+      }
+
+      &:hover {
+        background-color: $orange;
+
+        a {
+          color: $white;
+        }
+
+        & > .torque-menu-item-children-wrapper {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
     }
   }
 }

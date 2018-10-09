@@ -2,4 +2,4 @@
   QUICK LINKS:
 </div>
 
-<?php get_template_part( 'parts/shared/header-parts/menu-items/menu-items', 'inline'); ?>
+<?php get_template_part( 'parts/shared/header-parts/menu-items/menu-tree', 'inline'); ?>
