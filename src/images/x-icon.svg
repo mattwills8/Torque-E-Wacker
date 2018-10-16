@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.1 (57501) - http://www.bohemiancoding.com/sketch -->
+    <title>X Icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Hamburger" transform="translate(-600.000000, -70.000000)" stroke="#FFFFFF" stroke-width="2">
+            <g id="X-Icon" transform="translate(601.000000, 71.000000)">
+                <path d="M0,0 L15.9099026,15.9099026" id="Stroke-1-Copy-2"></path>
+                <path d="M15.9099026,0 L0,15.9099026" id="Stroke-1-Copy-2"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -15,10 +15,11 @@ function bindMegaMenu($) {
 
     _bindMenuToggle() {
       this.entry
-        .find(".mega-menu-highlight-box")
-        .first()
-        .click(() => {
-          this.entry.toggleClass("active");
+        .find(".mega-menu-highlight-box, .close-button")
+        .each((index, el) => {
+          $(el).click(() => {
+            this.entry.toggleClass("active");
+          });
         });
     }
 

@@ -35,6 +35,8 @@ $fax = get_field('fax', 'options');
 
   <div class="row mega-menu-menu-wrapper" >
 
+    <div class="close-button" ></div>
+
     <div class="col1 parent-items-wrapper" >
 
       <?php
